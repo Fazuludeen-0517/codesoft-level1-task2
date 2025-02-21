@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #222;
+            color: #fff;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Full-screen background */
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            background-size: cover;
+            animation: bgAnimation 15s ease infinite;
+        }
+
+        @keyframes bgAnimation {
+            0% { background: linear-gradient(135deg, #ff7e5f, #feb47b); }
+            50% { background: linear-gradient(135deg, #4ca1af, #c4e0e5); }
+            100% { background: linear-gradient(135deg, #ff7e5f, #feb47b); }
+        }
+
+        /* Main Container */
+        .container {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Subheading */
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        /* Button */
+        .cta-button {
+            background-color: #ff9900;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: #222;
+            border-radius: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #cc7a00;
+        }
+
+        /* Animated circle in the background */
+        .circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid #ff9900;
+            animation: circleAnimation 5s infinite ease-in-out;
+            z-index: 0;
+        }
+
+        @keyframes circleAnimation {
+            0% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.2); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 0.7; }
+        }
+
+        /* Footer */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9rem;
+            color: #bbb;
+            z-index: 1;
+        }
+
+        footer a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg"></div>
+    <div class="circle"></div>
+    <div class="container">
+        <h1>Discover Your Potential</h1>
+        <p>Join us on a journey of self-improvement and innovation. Our platform offers powerful tools to help you grow, learn, and succeed in any endeavor you choose.</p>
+        <button class="cta-button" onclick="scrollToForm()">Get Started</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Your Company | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        // Simple function to scroll to a form or another section
+        function scrollToForm() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
